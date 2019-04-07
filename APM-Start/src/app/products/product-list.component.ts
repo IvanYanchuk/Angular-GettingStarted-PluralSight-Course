@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
 })
 export class ProductListComponent {
     pageTitle = 'Product List';
+    imageWidth = 50;
+    imageMargin = 2;
+    showImage = false;
+    listFilter = 'cart';
     products: any[] = [
         {
           "productId": 1,
@@ -28,4 +32,7 @@ export class ProductListComponent {
           "imageUrl": "https://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
         }
     ];
-}
+    toggleImage(): void {
+      this.showImage = !this.showImage;
+    }
+  }
